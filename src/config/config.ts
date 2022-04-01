@@ -32,6 +32,8 @@ export const footer = {
   text: 'BasedBot',
 };
 
+export const admins = new Set(['121102334804623360']);
+
 export interface Config {
   token: string;
   guildId: string;

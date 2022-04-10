@@ -1,16 +1,10 @@
-import express from 'express';
 import { CustomClient } from './client';
 import { token, intents, activities, partials, expressPort } from './config/config';
 import logger from './config/logger';
 import * as events from './events';
 import * as commands from './commands';
+import app from './app';
 
-const app = express();
-
-app.disable('etag');
-app.disable('x-powered-by');
-
-app.get('/', (_req, res) => res.send('Hello world!'));
 const expressServer = app.listen(expressPort);
 
 const client: CustomClient = new CustomClient({ intents, partials });
@@ -46,6 +40,11 @@ const exitHandler = () => {
     process.exit(1);
   }
 };
+
+if (process.env.NODE_ENV === 'ci') {
+  logger.info('NAISU! CI Sucessful, now exiting...');
+  process.exit(0);
+}
 
 client
   .login(token)

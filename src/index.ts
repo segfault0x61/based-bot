@@ -43,6 +43,7 @@ const exitHandler = () => {
 
 if (process.env.NODE_ENV === 'ci') {
   logger.info('NAISU! CI Sucessful, now exiting...');
+  process.exit(0);
 }
 
 client

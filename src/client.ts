@@ -1,4 +1,6 @@
-import { Client, Collection, Message } from 'discord.js';
+import type { Message } from 'discord.js';
+import { Client, Collection } from 'discord.js';
+
 import * as config from './config/config';
 
 export type CustomClientType = Client & {

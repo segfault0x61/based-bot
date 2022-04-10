@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.ts",
     "prettier:fix": "prettier --write **/*.ts",
+    "ci": "yarn build && cross-env NODE_ENV=ci yarn start",
     "prepare": "husky install"
   },
   "repository": "https://github.com/segfault0x61/based-bot.git",
@@ -22,6 +23,7 @@
     "@discordjs/rest": "^0.3.0",
     "axios": "^0.26.1",
     "bufferutil": "^4.0.6",
+    "cross-env": "^7.0.3",
     "discord-api-types": "^0.30.0",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",

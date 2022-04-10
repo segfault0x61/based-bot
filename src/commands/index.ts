@@ -1,7 +1,6 @@
-import userinfo from './userinfo';
+import github from './github';
 import help from './help';
 import listguild from './listGuild';
-import github from './github';
+import userinfo from './userinfo';
 
-// eslint-disable-next-line import/prefer-default-export
-export { userinfo, help, listguild, github };
+export { github, help, listguild, userinfo };

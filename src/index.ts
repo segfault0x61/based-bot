@@ -1,9 +1,9 @@
+import app from './app';
 import { CustomClient } from './client';
-import { token, intents, activities, partials, expressPort } from './config/config';
+import * as commands from './commands';
+import { activities, expressPort, intents, partials, token } from './config/config';
 import logger from './config/logger';
 import * as events from './events';
-import * as commands from './commands';
-import app from './app';
 
 const expressServer = app.listen(expressPort);
 

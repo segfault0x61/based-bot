@@ -42,6 +42,21 @@ const whatanime: Command = {
       image: {
         url: traceMoeResult.result[0].image,
       },
+      url: `https://anilist.co/anime/${traceMoeResult.result[0].anilist}`,
+      fields: [
+        {
+          name: 'Similarity',
+          value: `${traceMoeResult.result[0].similarity}`,
+        },
+        {
+          name: 'Video',
+          value: traceMoeResult.result[0].video,
+        },
+        {
+          name: 'Image',
+          value: traceMoeResult.result[0].image,
+        },
+      ],
     };
 
     message.channel.send({ embeds: [fillTimestamp(embeds)] });

@@ -1,4 +1,6 @@
 const isValidUrl = (input: string): boolean => {
+  if (!input) return false;
+
   let res: URL;
   const url = input.startsWith('http://') || input.startsWith('https://') ? input : 'https://' + input;
 
